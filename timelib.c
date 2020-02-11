@@ -101,3 +101,16 @@ int day_of_the_year(int day, int month, int year)
     }
 
 }
+
+int weekday_as_number(int day, int month, int year)
+{
+    int yearfisthalf = 0, yearsecondhalf = 0, dayno = 0, centuryno = 0, leapyearcorection = 0;
+    int allmonthnos[12] = {0,3,3,6,1,4,6,2,5,0,3,5};
+    int allyearnos[28] = {0,1,2,3,5,6,0,1,3,4,5,6,1,2,3,4,6,0,1,2,4,5,6,0,2,3,4,5,0};
+
+    yearsecondhalf = (year % 10) + (((year /10) % 10) * 10);
+    yearfisthalf = (year / 100) % 10)) + (((year /1000) % 10) * 10);
+
+    dayno = day % 7;
+
+}
