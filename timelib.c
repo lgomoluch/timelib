@@ -105,6 +105,34 @@ int day_of_the_year(int day, int month, int year)
 
 }
 
+
+/**
+* Funktion zum Eingeben des Datums
+* @param *day: Pointer auf die übergebene Variable des Tages
+* @param *month: Pointer auf die übergebene Variable des Monats
+* @param *year: Pointer auf die übergebene Variable des Jahres
+*/
+void input_date(int *day, int *month, int *year)
+{
+    do{
+
+    printf("Geben sie den Tag des Datums ein:");
+    scanf("%d",&*day);
+    fflush(stdin);
+
+    printf("Geben sie den Monat des Datums ein:");
+    scanf("%d",&*month);
+    fflush(stdin);
+
+    printf("Geben sie den Jahr des Datums ein:");
+    scanf("%d",&*year);
+    fflush(stdin);
+
+    }while (!(exists_date(*day, *month, *year)));
+}
+
+
+
 /**
 * Funktion, welche den Wochentag eines Datums des gregoreanischen Kalenders ausgibt
 * @param day: Integer, der den Tag repräsentiert

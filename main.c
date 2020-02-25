@@ -4,7 +4,7 @@
  * Eine Bibliothek mit verschiedenen Zeitfunktionen
  *
  * Autor: Lothar Gomoluch
- * Last Edited: 11.02.2020
+ * Last Edited: 25.02.2020
  **/
 
 #include <stdio.h>
@@ -12,26 +12,15 @@
 #include "timelib.h"
 
 /**
-*
-*
-*
+* Main Funktion, welche am Anfang des Programmes aufgerufen wird.
+* @return int: 0 wenn alles richtig ist, sonst -1
 */
 int main()
 {
     int month=0,year=0,day=0;
 
-    printf("Geben sie den Tag des Datums ein:");
-    scanf("%d",&day);
-    fflush(stdin);
+    input_date(&day, &month, &year);
 
-    printf("Geben sie den Monat des Datums ein:");
-    scanf("%d",&month);
-    fflush(stdin);
-
-    printf("Geben sie den Jahr des Datums ein:");
-    scanf("%d",&year);
-    fflush(stdin);
-
-    printf("Tag des Jahres: %i\n", day_of_the_year(day, month, year));
+    printf("Tag des Jahres: %i\n", weekday_as_number(day, month, year));
     return 0;
 }
