@@ -66,7 +66,7 @@ int exists_date(int day, int month, int year)
     //Jahr zwischen 1582 und 2400 sind gültig
     //Monat zwischen 1 und 12 sind gültig
     //Tag holen und überprüfen, ob es richtig ist
-    if ((year > 1582 && year < 2400) &&
+    if ((year >= 1582 && year <= 2400) &&
             (month > 0 && month < 13) &&
             (day > 0 || day <= get_days_for_month(month-1, year)))
     {
