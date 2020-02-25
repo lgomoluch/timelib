@@ -39,4 +39,12 @@ int exists_date(int day, int month, int year);
 * @return number: Die Nummer, welche die des Tages des eingegebenen Datums ist
 **/
 int day_of_the_year(int day, int month, int year);
+
+/**
+* Funktion, welche den Wochentag eines Datums des gregoreanischen Kalenders ausgibt
+* @param day: Integer, der den Tag repräsentiert
+* @param month: Integer, der den Monat repräsentiert
+* @param year: Integer, der das Jahr repräsentiert
+*/
+int weekday_as_number(int day, int month, int year)
 #endif // TIMELIB_H_INCLUDED
