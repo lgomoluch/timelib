@@ -17,11 +17,10 @@
 */
 int main()
 {
-    int month=0,year=0,day=0;
+    struct date curdate;
+    curdate = input_date();
 
-    input_date(&day, &month, &year);
-
-    weekday_as_number(day, month, year);
-    printf("Tag des Jahres: %i\n", day_of_the_year(day,month,year));
+    weekday_as_number(curdate);
+    printf("Tag des Jahres: %i\n", day_of_the_year(curdate));
     return 0;
 }
