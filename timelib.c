@@ -1,3 +1,11 @@
+/**
+* Timelib - timelib.c
+*
+* C-Datei, welche die Funktionen der Prototypen aus dem Header beinhaltet
+*
+* Autor: Lothar Gomoluch
+* Last Edited: 10.03.2020
+*/
 #include <stdio.h>
 #include <stdlib.h>
 #include "timelib.h"
@@ -88,7 +96,6 @@ int exists_date(struct date curdate)
 //int day_of_the_year(int day, int month, int year)
 int day_of_the_year(struct date curdate)
 {
-
     int i = 0, number = 0, realmonth = curdate.month;
 
     if(exists_date(curdate) == 0)
@@ -142,6 +149,50 @@ struct date input_date()
     return inputdate;
 }
 
+/**
+* Funktion, welche den Output der Weekday_as_number Funktion übernimmt
+* @param weekdayno: Eine Nummer von 0-6, 0 entspricht Sonntag
+* @return int: Gibt 0 bei erfolgreichem ausführen zurück, sonst -1
+*/
+int return_weekday(int weekdayno)
+{
+    switch(weekdayno)
+    {
+    case 0:
+        printf("Sonntag\n");
+        break;
+
+    case 1:
+        printf("Montag\n");
+        break;
+
+    case 2:
+        printf("Dienstag\n");
+        break;
+
+    case 3:
+        printf("Mittwoch\n");
+        break;
+
+    case 4:
+        printf("Donnerstag\n");
+        break;
+
+    case 5:
+        printf("Freitag\n");
+        break;
+
+    case 6:
+        printf("Samstag\n");
+        break;
+
+    default:
+        printf("Fehler bei der Wochentagsberechnung.");
+        return -1;
+
+    return 0;
+    }
+}
 
 
 /**
@@ -150,7 +201,7 @@ struct date input_date()
 * @param month: Integer, der den Monat repräsentiert
 * @param year: Integer, der das Jahr repräsentiert
 */
-int weekday_as_number(struct date curdate)
+void weekday_as_number(struct date curdate)
 {
     int yearfisthalf = 0, yearsecondhalf = 0, dayno = 0, monthno = 0;
     int yearno = 0, centuryno = 0, leapyearcorection = 0, weekdayno = 0;
@@ -185,39 +236,5 @@ int weekday_as_number(struct date curdate)
 
     weekdayno = (dayno + monthno + yearno + centuryno + leapyearcorection) % 7;
 
-    switch(weekdayno)
-    {
-    case 0:
-        printf("Sonntag\n");
-        break;
-
-    case 1:
-        printf("Montag\n");
-        break;
-
-    case 2:
-        printf("Dienstag\n");
-        break;
-
-    case 3:
-        printf("Mittwoch\n");
-        break;
-
-    case 4:
-        printf("Donnerstag\n");
-        break;
-
-    case 5:
-        printf("Freitag\n");
-        break;
-
-    case 6:
-        printf("Samstag\n");
-        break;
-
-    default:
-        return -1;
-    }
-
-    return 0;
+    return_weekday(weekdayno);
 }

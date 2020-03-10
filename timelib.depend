@@ -6,14 +6,15 @@
 
 1583152748 d:\schule\lf6\portablegit - kopie\timelib\timelib.h
 
-1583157042 source:d:\schule\lf6\32bit\timelib\main.c
+1583825648 source:d:\schule\lf6\32bit\timelib\main.c
 	<stdio.h>
 	<stdlib.h>
 	"timelib.h"
 
-1583156380 d:\schule\lf6\32bit\timelib\timelib.h
+1583825720 d:\schule\lf6\32bit\timelib\timelib.h
 
-1583153330 source:d:\schule\lf6\32bit\timelib\timelib.c
+1583825702 source:d:\schule\lf6\32bit\timelib\timelib.c
 	<stdio.h>
 	<stdlib.h>
+	"timelib.h"
 

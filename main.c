@@ -1,12 +1,12 @@
 /**
- * Timelib
+ * Timelib - main.c
  *
- * Eine Bibliothek mit verschiedenen Zeitfunktionen
+ * Die "main.c" der timelib-Bibliothek, welche die Tagesnummer eines Datums berechnet
+ * sowie den Wochentag dieses Datums
  *
  * Autor: Lothar Gomoluch
  * Last Edited: 25.02.2020
  **/
-
 #include <stdio.h>
 #include <stdlib.h>
 #include "timelib.h"
@@ -20,7 +20,7 @@ int main()
     struct date curdate;
     curdate = input_date();
 
-    weekday_as_number(curdate);
     printf("Tag des Jahres: %i\n", day_of_the_year(curdate));
+    weekday_as_number(curdate);
     return 0;
 }

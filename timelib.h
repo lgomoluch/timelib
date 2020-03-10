@@ -1,6 +1,19 @@
+/**
+* Timelib - timelib.h
+*
+* Header-Datei, welche die Funktionsprototypen sowie die Struktur, welche von diesen
+* Funktionen genutzt wird
+*
+* Autor: Lothar Gomoluch
+* Last Edited: 10.03.2020
+*/
 #ifndef TIMELIB_H_INCLUDED
 #define TIMELIB_H_INCLUDED
 
+/**
+* Struktur, welche bereits den Datentyp für die Funktionen vorgibt.
+* Fasst die einzelnen Datum-Teildatentypen zusammen
+*/
 struct date{
     int day;
     int month;
@@ -55,10 +68,17 @@ int day_of_the_year(struct date curdate);
 struct date input_date();
 
 /**
+* Funktion, welche den Output der Weekday_as_number Funktion übernimmt
+* @param weekdayno: Eine Nummer von 0-6, 0 entspricht Sonntag
+* @return int: Gibt 0 bei erfolgreichem ausführen zurück, sonst -1
+*/
+int return_weekday(int weekdayno);
+
+/**
 * Funktion, welche den Wochentag eines Datums des gregoreanischen Kalenders ausgibt
 * @param day: Integer, der den Tag repräsentiert
 * @param month: Integer, der den Monat repräsentiert
 * @param year: Integer, der das Jahr repräsentiert
 */
-int weekday_as_number(struct date curdate);
+void weekday_as_number(struct date curdate);
 #endif // TIMELIB_H_INCLUDED
